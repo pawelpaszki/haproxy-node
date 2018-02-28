@@ -11,11 +11,8 @@ router.get('/', function(req, res) {
     const haProxy = req.connection.remoteAddress;
     const origin = req.headers['x-forwarded-for'] || haProxy;
     const webServer = getIPAddress();
-    console.log('haProxy ' + haProxy);
-    console.log('origin ' + origin);
-    console.log('webServer ' + getIPAddress());
-    console.log(util.inspect(req.headers, false, null));
-    res.render('index');
+    const headerInfo = util.inspect(req.headers, false, null);
+    res.render('index', {haProxy: haProxy, origin: origin, webServer: webServer, headerInfo: headerInfo});
 });
 
 function getIPAddress() {

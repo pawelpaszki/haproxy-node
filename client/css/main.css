@@ -1,10 +1,6 @@
 .center-div {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.bottom-margin {
-    margin-bottom: 2em;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    word-wrap: break-word;
 }

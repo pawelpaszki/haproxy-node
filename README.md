@@ -1,11 +1,7 @@
-# Express & Pug Example App
+# HA Proxy with node
 
-## Installation
-* Clone repo
-    `git clone https://github.com/dallen4/express-pug.git`
-* navigate to directory
-    `cd express-pug`
+## Installation`
 * install necessary packages
     `npm install`
 * run application
-    `npm start`
+    `node server.js

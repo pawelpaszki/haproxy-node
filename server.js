@@ -6,9 +6,18 @@
 
 // import necessary modules
 var http = require('http');
+var https = require('https');
 var path = require('path');
 var express = require('express');
 var logger = require('morgan');
+var fs = require('fs');
+
+var options = {
+    key: fs.readFileSync('./server.key'),
+    cert: fs.readFileSync('./server.crt'),
+    requestCert: false,
+    rejectUnauthorized: false
+};
 
 // instantiate Express application
 var expressApp = express();
@@ -39,3 +48,5 @@ server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   var addr = server.address();
   console.log("Node demo listening at", addr.address + ":" + addr.port);
 });
+
+https.createServer(options, expressApp).listen(443);

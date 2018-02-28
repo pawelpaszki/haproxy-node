@@ -1,7 +1,11 @@
 # HA Proxy with node
 
-## Installation`
+## Installation
 * install necessary packages
-    `npm install`
+    ```
+    npm install`
+    ```
 * run application
-    `node server.js
+    ```
+    node server.js
+    ```
